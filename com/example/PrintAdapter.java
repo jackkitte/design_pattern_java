@@ -1,15 +1,22 @@
 package com.example;
 
-public class PrintAdapter extends Show implements Print {
+public class PrintAdapter implements Print {
+    Show show;
+
+    public PrintAdapter() {
+        super();
+        show = new Show();
+    }
+
     public void printStr(String str) {
         System.out.println("==========");
-        showStr(str);
+        show.showStr(str);
         System.out.println("==========");
     }
 
     public void printNumber(int value) {
         System.out.println("----------");
-        showNumber(value);
+        show.showNumber(value);
         System.out.println("----------");
     }
 }
